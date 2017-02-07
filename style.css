@@ -1,0 +1,84 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	box-sizing: border-box;
+	font-size: 10px;
+}
+
+.wrapper {
+	display: flex;
+	height: 100%;
+	overflow: hidden;
+}
+
+.panel {
+	flex: 1;
+	box-shadow: inset 0 0 1rem .3rem rgba(0, 0, 0, .4);
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+	font-size: 4rem;
+	background-size: cover;
+    background-position: center;
+	transition:
+		font-size .8s cubic-bezier(0.6,-0.15, 0.7,-0.11),
+        flex .7s cubic-bezier(0.6,-0.15, 0.7,-0.11),
+        transform .7s cubic-bezier(1,-0.03, 0.82, 0.1);
+}
+
+.panel:hover {
+	cursor: pointer;
+}
+
+.panel p {
+	text-transform: uppercase;
+	font-family: 'Architects Daughter', cursive;
+	text-shadow: 0 0 .4rem rgba(0, 0, 0, .7), 0 0 1.4rem rgba(0, 0, 0, 0.44);
+	margin:0;
+	width: 100%;
+}
+
+.panel p:nth-child(odd) {
+	font-size: 3rem;
+	transition: transform .6s;
+}
+
+.panel > *:first-child { transform: translateY(-30rem); }
+.panel.active > *:first-child { transform: translateY(5rem); }
+
+.panel > *:last-child { transform: translateY(30rem); }
+.panel.active > *:last-child { transform: translateY(-5rem); }
+
+.panel.open {
+	flex: 8;
+	font-size: 7em;
+	transform: scale(1.2);
+}
+
+/*pictures from pexels.com*/
+.pic1 {
+	background: url(img/img1.jpg) no-repeat center;
+	background-size: cover;
+}
+.pic2 {
+	background: url(img/img2.jpg) no-repeat center;
+	background-size: cover;
+}
+
+.pic3 {
+	background: url(img/img3.jpg) no-repeat center;
+	background-size: cover;
+}
+.pic4 {
+	background: url(img/img4.jpg) no-repeat center;
+	background-size: cover;
+}
+.pic5 {
+	background: url(img/img5.jpg) no-repeat center;
+	background-size: cover;
+}
